@@ -15,6 +15,11 @@ builder.Services.AddDbContext<PeliculasDbContext>(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<PeliculasDbContext>();
+    db.Database.Migrate();
+}
 // SeedData desactivado temporalmente para el despliegue
 // using (var scope = app.Services.CreateScope())
 // {
