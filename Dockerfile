@@ -6,6 +6,9 @@ COPY ["MVCPeliculas/MVCPeliculas.csproj", "MVCPeliculas/"]
 
 RUN dotnet restore "MVCPeliculas/MVCPeliculas.csproj"
 
+RUN dotnet tool install --global dotnet-ef --version 8.*
+ENV PATH="$PATH:/root/.dotnet/tools"
+
 COPY . .
 
 WORKDIR "/src/MVCPeliculas"
