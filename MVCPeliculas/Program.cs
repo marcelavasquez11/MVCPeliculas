@@ -20,12 +20,12 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<PeliculasDbContext>();
     db.Database.Migrate();
 }
-// SeedData desactivado temporalmente para el despliegue
-// using (var scope = app.Services.CreateScope())
-// {
-//     var services = scope.ServiceProvider;
-//     SeedData.Initialize(services);
-// }
+
+ using (var scope = app.Services.CreateScope())
+ {
+     var services = scope.ServiceProvider;
+     SeedData.Initialize(services);
+ }
 
 if (!app.Environment.IsDevelopment())
 {
