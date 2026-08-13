@@ -34,7 +34,7 @@ namespace MVCPeliculas.Data
                     new Pelicula
                     {
                         Titulo = "Harry Potter y la piedra filosofal",
-                        FechaLanzamiento = DateTime.Parse("2001-11-16"),
+                        FechaLanzamiento = new DateTime(2001, 11, 16, 0, 0, 0, DateTimeKind.Utc),
                         GeneroId = 1,
                         Precio = 7.55m,
                         Director = "Chris Columbus"
@@ -42,7 +42,7 @@ namespace MVCPeliculas.Data
                     new Pelicula
                     {
                         Titulo = "El Señor de los Anillos: La Comunidad del Anillo",
-                        FechaLanzamiento = DateTime.Parse("2001-12-10"),
+                        FechaLanzamiento = new DateTime(2001, 12, 10, 0, 0, 0, DateTimeKind.Utc),
                         GeneroId = 3,
                         Precio = 8.30m,
                         Director = "Peter Jackson"
@@ -50,7 +50,7 @@ namespace MVCPeliculas.Data
                     new Pelicula
                     {
                         Titulo = "El silencio de los corderos",
-                        FechaLanzamiento = DateTime.Parse("1991-02-14"),
+                        FechaLanzamiento = new DateTime(1991, 2, 14, 0, 0, 0, DateTimeKind.Utc),
                         GeneroId = 2,
                         Precio = 6.25m,
                         Director = "Jonathan Demme"
