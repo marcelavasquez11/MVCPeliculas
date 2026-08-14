@@ -26,8 +26,8 @@ RUN dotnet tool install --global dotnet-ef --version 8.*
 
 ENV PATH="$PATH:/root/.dotnet/tools"
 
-ENV ASPNETCORE_URLS=http://+:10000
+ENV ASPNETCORE_URLS=http://+:8080
 
-EXPOSE 10000
+EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "MVCPeliculas.dll"]

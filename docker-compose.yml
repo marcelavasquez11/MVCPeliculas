@@ -1,0 +1,23 @@
+services:
+
+  peliculas-app:
+    build: .
+    ports:
+      - "8081:8080"
+    depends_on:
+      - peliculas-db
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=peliculas-db;Database=Peliculas;User Id=sa;Password=Your_password123!;TrustServerCertificate=True
+
+  peliculas-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Your_password123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-data:/var/opt/mssql
+
+volumes:
+  sql-data:
