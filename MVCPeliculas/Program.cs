@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddDbContext<PeliculasDbContext>(options =>
   //  options.UseNpgsql(connectionString));
 builder.Services.AddDbContext<PeliculasDbContext>(options =>
-    options.UseNpgsql(
+    options.UseSqlServer(
        builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();

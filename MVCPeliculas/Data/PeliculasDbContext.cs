@@ -18,6 +18,6 @@ public class PeliculasDbContext : DbContext
 
         modelBuilder.Entity<Pelicula>()
             .Property(p => p.FechaLanzamiento)
-            .HasColumnType("timestamp without time zone");
+            .HasColumnType("datetime2");
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace MVCPeliculas.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialPostgres : Migration
+    public partial class InitialSqlServer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,9 +15,9 @@ namespace MVCPeliculas.Migrations
                 name: "Generos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Nombre = table.Column<string>(type: "text", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,13 +28,13 @@ namespace MVCPeliculas.Migrations
                 name: "Peliculas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Titulo = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: false),
-                    FechaLanzamiento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Titulo = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    FechaLanzamiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Precio = table.Column<decimal>(type: "money", nullable: false),
-                    Director = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
-                    GeneroId = table.Column<int>(type: "integer", nullable: false)
+                    Director = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    GeneroId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
