@@ -32,60 +32,59 @@ MVCPeliculas es una aplicación web desarrollada con **ASP.NET MVC** y **Entity 
 ```bash
 Desafio1/
 │
-├── MVCPeliculas/                    # Carpeta principal de la aplicación
-│   ├── Controllers/
-│   │   ├── HomeController.cs
-│   │   ├── PeliculasController.cs
-│   │   └── HelloWorldController.cs
+├── MVCPeliculas/                           
 │   │
-│   ├── Data/
-│   │   ├── PeliculasDbContext.cs
-│   │   └── SeedData.cs
+│   ├── Controllers/                          # Controladores - Lógica de la aplicación
+│   │   ├── HomeController.cs                 # Página de inicio y privacidad
+│   │   ├── PeliculasController.cs            # CRUD completo de películas
+│   │   └── HelloWorldController.cs           # Controlador de ejemplo
 │   │
-│   ├── Models/
-│   │   ├── Pelicula.cs
-│   │   ├── Genero.cs
-│   │   └── ErrorViewModel.cs
+│   ├── Data/                                
+│   │   ├── PeliculasDbContext.cs             # Contexto de Entity Framework
+│   │   └── SeedData.cs                       # Datos iniciales
 │   │
-│   ├── Views/
-│   │   ├── Home/
-│   │   │   ├── Index.cshtml
-│   │   │   └── Privacy.cshtml
+│   ├── Models/                                
+│   │   ├── Pelicula.cs                       # Modelo de película 
+│   │   └── ErrorViewModel.cs                 # Modelo para manejo de errores
+│   │
+│   ├── Views/                               
 │   │   │
-│   │   ├── Peliculas/
-│   │   │   ├── Index.cshtml
-│   │   │   ├── Create.cshtml
-│   │   │   ├── Edit.cshtml
-│   │   │   ├── Details.cshtml
-│   │   │   └── Delete.cshtml
+│   │   ├── Home/                             # Vistas de la página principal
+│   │   │   ├── Index.cshtml                  # Página de inicio con bienvenida
+│   │   │   └── Privacy.cshtml               
 │   │   │
-│   │   └── Shared/
-│   │       ├── _Layout.cshtml
-│   │       └── _ValidationScriptsPartial.cshtml
+│   │   ├── Peliculas/                        # Vistas del CRUD de películas
+│   │   │   ├── Index.cshtml                  
+│   │   │   ├── Create.cshtml                
+│   │   │   ├── Edit.cshtml                   
+│   │   │   ├── Details.cshtml               
+│   │   │   └── Delete.cshtml                 
+│   │   │
+│   │   └── Shared/                           # Vistas compartidas
+│   │       ├── _Layout.cshtml                # Plantilla principal de la página
+│   │       └── _ValidationScriptsPartial.cshtml  # Validaciones
 │   │
-│   ├── Migrations/
+│   ├── Migrations/                           
 │   │
-│   ├── wwwroot/
+│   ├── wwwroot/                              
 │   │   ├── css/
-│   │   │   └── site.css
+│   │   │   └── site.css                      # Estilos personalizados
 │   │   ├── images/
-│   │   │   └── movie.png			  # Imagen de Inicio
-│   │   └── lib/
+│   │   │   └── movie.png                     # Imagen de la página de inicio
+│   │   └── lib/                              # Librerías externas
 │   │
-│   ├── Properties/
-│   │   └── launchSettings.json
+│   ├── Properties/			      # Configuración de ejecución
 │   │
-│   ├── Program.cs
-│   └──  appsettings.json
+│   ├── Program.cs                             # Punto de entrada de la aplicación
+│   └── appsettings.json                       # Configuración (cadena de conexión)
 │
-├── Dockerfile                        # Configuración de Docker (raíz)
-├── docker-compose.yml                # Orquestación de contenedores (raíz)                 
-├── .gitignore                        
-├── README.md                         
+├── Dockerfile                                 # Configuración para contenerización
+├── docker-compose.yml                         # Orquestación App + SQL Server
+├── .gitignore                                 
+├── README.md                                  
 │
-└── evidencias/                       # Capturas de funcionamiento
+└── evidencias/                                # Capturas de funcionamiento
 ```
-
 
 ## 🐳 Ejecución con Docker
 
