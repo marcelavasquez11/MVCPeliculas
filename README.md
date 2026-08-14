@@ -194,8 +194,8 @@ EXIT
 
 ## 👩‍💻 Realizado por
 
-- **Nombre:** Melissa Flores FA220709
-- **Carnet:** Wendy Aguilar AV220801 
+- **Melissa Flores FA220709**
+- **Wendy Aguilar AV220801**
 
 ---
 
