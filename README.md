@@ -104,7 +104,7 @@ La aplicación desplegada en Render se conecta con la base de datos alojada en S
 ### ☁️ Resultado
 
 El despliegue permite disponer de una versión accesible desde Internet, integrando la **aplicación web alojada en Render** con la **base de datos alojada en Somee**, como parte de la migración del sistema desde un entorno local hacia servicios en la nube.
----
+
 ## 🐳 Ejecución con Docker
 
 ### 📋 Requisito Previo
