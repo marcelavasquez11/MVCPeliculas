@@ -85,7 +85,26 @@ Desafio1/
 │
 └── evidencias/                                # Capturas de funcionamiento
 ```
+## ☁️ Despliegue en la nube
 
+Como parte del proyecto de **Cloud Computing**, la aplicación **MVCPeliculas** fue desplegada en la plataforma **Render**, permitiendo acceder al sistema de forma remota mediante Internet sin necesidad de ejecutarlo directamente en el entorno local.
+
+### 🌐 Aplicación desplegada
+
+La aplicación se encuentra disponible en:
+
+**URL:** https://mvcpeliculas-av220801.onrender.com
+
+### 🗄️ Base de datos
+
+La base de datos **SQL Server** utilizada por la aplicación se encuentra alojada en **Somee**. Esta contiene la información correspondiente a las películas y géneros registrados en el sistema.
+
+La aplicación desplegada en Render se conecta con la base de datos alojada en Somee mediante la cadena de conexión configurada para el entorno de producción.
+
+### ☁️ Resultado
+
+El despliegue permite disponer de una versión accesible desde Internet, integrando la **aplicación web alojada en Render** con la **base de datos alojada en Somee**, como parte de la migración del sistema desde un entorno local hacia servicios en la nube.
+---
 ## 🐳 Ejecución con Docker
 
 ### 📋 Requisito Previo
